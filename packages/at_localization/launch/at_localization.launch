@@ -1,0 +1,10 @@
+<launch>
+    <arg name="veh" doc="Name of vehicle. ex: megaman"/>
+    <arg name="node_name" default="at_localization_node"/>
+    
+    <group ns="$(arg veh)">
+        <node pkg="at_localization" type="at_localization_node.py"
+              name="$(arg node_name)" output="screen" required="true">
+        </node>
+    </group>
+</launch>

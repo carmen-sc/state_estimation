@@ -13,7 +13,7 @@ dt-launchfile-init
 # NOTE: Use `dt-exec COMMAND` to run the main process (blocking process)
 
 # launching app
-dt-exec echo "This is an empty launch script. Choose one of the encoder, at, or fused packages."
+dt-exec roslaunch encoder_localization encoder_localization.launch veh:="$VEHICLE_NAME"
 
 
 # ----------------------------------------------------------------------------

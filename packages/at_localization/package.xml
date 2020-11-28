@@ -1,0 +1,15 @@
+<?xml version="1.0"?> 
+<package>
+  <name>at_localization</name>
+  <version>0.1.0</version>
+  <description>
+  This package is a handin for AMOD 2020 CRA1 B-4
+  </description>
+  <maintainer email="carmensc@ethz.ch">Carmen</maintainer>
+  <license>None</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>image_geometry</build_depend>
+  <run_depend>image_geometry</run_depend>
+</package>
+

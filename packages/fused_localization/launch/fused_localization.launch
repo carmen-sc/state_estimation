@@ -1,0 +1,18 @@
+<launch>
+    <arg name="veh" doc="Name of vehicle. ex: megaman"/>
+    <arg name="node_name" default="fused_localization_node"/>
+    
+    <group ns="$(arg veh)">
+        <remap from="~encoder_baselink_pose" to="encoder_localization_node/encoder_baselink_pose"/>
+        <remap from="~at_baselink_pose" to="at_localization_node/at_baselink_pose"/>
+        <node pkg="fused_localization" type="fused_localization_node.py"
+              name="$(arg node_name)" output="screen" required="true">
+        </node>
+        <node pkg="encoder_localization" type="encoder_localization_node.py"
+              name="encoder_localization_node" output="screen" required="true">
+        </node>
+        <node pkg="at_localization" type="at_localization_node.py"
+              name="at_localization_node" output="screen" required="true">
+        </node>
+    </group>
+</launch>
